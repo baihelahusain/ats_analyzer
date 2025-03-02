@@ -94,7 +94,7 @@ def input_pdf_setup(uploaded_file):
         try:
             images = pdf2image.convert_from_bytes(
                 uploaded_file.read(),
-                poppler_path=r"C:\Program Files (x86)\poppler-24.08.0\Library\bin"  # UPDATE THIS PATH
+                poppler_path=r""  # UPDATE THIS PATH
             )
             first_page = images[0]
 
