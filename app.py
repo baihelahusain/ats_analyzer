@@ -9,7 +9,11 @@ import google.generativeai as genai
 
 # ---------- CONFIGURATIONS ----------
 #load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+#genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+#this for streamlit cloud
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+
+
 
 # ---------- CUSTOM THEME & STYLING ----------
 def set_custom_theme():
