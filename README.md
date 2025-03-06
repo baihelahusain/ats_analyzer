@@ -6,4 +6,4 @@
 
 **Its a resume analyzer**
 ---
-**Link:** https://atsanalyzer-em8uazmhxscpqkrnb6j5jb.streamlit.app/
+**Link:** https://resume-ats-analyzer-by-neural-net-ninjas.streamlit.app/
