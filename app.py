@@ -97,16 +97,22 @@ def set_custom_theme():
 def input_pdf_setup(uploaded_file):
     if uploaded_file is not None:
         try:
-            images = pdf2image.convert_from_bytes(
-                uploaded_file.read(),
-            #  UPDATE THIS PATH
-            )
-            first_page = images[0]
-
+            # Read PDF bytes
+            pdf_bytes = uploaded_file.read()
+            
+            # Open PDF with PyMuPDF
+            doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+            page = doc.load_page(0)  # First page
+            
+            # Render page to image (200 DPI for good quality)
+            pix = page.get_pixmap(dpi=200)
+            img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+            
+            # Convert to base64
             img_byte_arr = io.BytesIO()
-            first_page.save(img_byte_arr, format='JPEG')
+            img.save(img_byte_arr, format="JPEG")
             img_byte_arr = img_byte_arr.getvalue()
-
+            
             return [{
                 "mime_type": "image/jpeg",
                 "data": base64.b64encode(img_byte_arr).decode()
