@@ -4,7 +4,7 @@ import io
 import os
 import streamlit as st
 from PIL import Image
-import pdf2image
+#import pdf2image
 import fitz
 import google.generativeai as genai
 
