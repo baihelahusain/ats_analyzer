@@ -1,6 +1,6 @@
 # ats_analyzer
 
-## **Hackathong Project**
+## **Hackathong Project Feature**
 
 ---
 
