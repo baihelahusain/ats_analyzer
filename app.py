@@ -166,22 +166,46 @@ def main():
         improve_btn = st.button("⚡ Improve Resume")
     
     analysis_prompt = """
-    You are an elite HR ninja with 20 years experience. Analyze this resume against the job description.
-    Follow this structure:
-    1. Combat Rating (0-100)
-    2. Strengths (3 bullet points)
-    3. Weaknesses (3 bullet points)
-    4. Missing Skills
-    5. Optimization Strategy
+    You are a highly experienced HR strategist with over 20 years in talent acquisition and resume evaluation. Analyze the provided resume in conjunction with the job description. Your response should include:
+
+    1. **Combat Rating (0-100):**  
+    - Provide a clear numeric score that reflects how well the resume aligns with the job description and give the score accordingly if the user have the equivalent skill give it the score its should not follow the proper description.
+
+    2. **Strengths:**  
+    - List at least 3 bullet points that highlight the resume’s top strengths, referencing specific experiences or skills that match the job requirements.
+
+    3. **Weaknesses:**  
+    - Identify at least 3 areas where the resume does not meet the job description’s expectations. Explain any gaps in experience, skills, or presentation.
+
+    4. **Missing Skills & Keywords:**  
+    - Identify crucial skills, certifications, or keywords missing from the resume that are essential for the role.
+    - Suggest specific keywords that could improve keyword matching for Applicant Tracking Systems (ATS).
+
+    5. **Optimization Strategy:**  
+    - Propose a detailed, step-by-step plan for enhancing the resume. Include recommendations on content, formatting, and keyword integration to improve ATS compliance and overall impact.
+
+    Format your analysis with clear headings and use markdown for clarity.
     """
 
     improvement_prompt = """
-    You are a resume sensei. Provide specific, actionable improvements:
-    1. Keyword Optimization
-    2. Formatting Fixes
-    3. Achievement Boosts
-    4. ATS Compliance
-    Format as markdown with emojis.
+    You are a resume sensei with deep expertise in ATS optimization and recruitment best practices. Provide actionable, detailed improvements for the resume with a focus on the following areas:
+    
+    1. **Keyword Optimization:**  
+    - Identify specific keywords that should be integrated to better align the resume with the job description.
+    - Explain why these keywords are critical for ATS recognition.
+
+    2. **Formatting Fixes:**  
+    - Recommend layout and design enhancements that improve readability and ATS compatibility.
+    - Suggest adjustments in structure, such as headings, bullet points, and white space.
+
+    3. **Achievement Enhancements:**  
+    - Advise on how to better quantify accomplishments using metrics, percentages, and concrete examples.
+    - Propose ways to transform generic statements into compelling, achievement-driven bullet points.
+
+    4. **ATS Compliance:**  
+    - Provide recommendations to ensure that the resume is fully optimized for ATS scanning, including file format, keyword density, and proper use of standard fonts and headings.
+
+    Your response should be structured in markdown and include emojis to emphasize key recommendations. Provide a clear, concise, and detailed improvement plan.
     """
 
     # Handle actions
