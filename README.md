@@ -1,9 +1,7 @@
 # ats_analyzer
 
-## **Hackathong Project Feature**
-
+## **Streamlit & Gen AI based Poject**
 ---
-
-**Its a resume analyzer**
+**It's a resume analyzer**
 ---
 **Link:** https://resume-ats-analyzer-by-neural-net-ninjas.streamlit.app/
