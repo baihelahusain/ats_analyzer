@@ -123,7 +123,7 @@ def input_pdf_setup(uploaded_file):
     raise FileNotFoundError("No file uploaded")
 
 def get_gemini_response(input_prompt, pdf_content, job_desc):
-    model = genai.GenerativeModel('gemini-1.5-flash-latest')
+    model = genai.GenerativeModel('gemini-2.5-flash')
     try:
         response = model.generate_content([input_prompt, pdf_content[0], job_desc])
         return response.text
@@ -234,3 +234,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
